@@ -24,16 +24,34 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p id="demo"></p>
 
 <script>
-var x = document.getElementById("myBtn");
-x.addEventListener("mouseover", myFunction);
-x.addEventListener("click", mySecondFunction);
+let x = document.getElementById("myBtn");
+x.addEventListener("mouseover", mouseOverAction);
+x.addEventListener("mouseover", mouseOverEvent);
+x.addEventListener("click", clickAction);
+x.addEventListener("click", clickEvent);
 
-function myFunction() {
+function mouseOverAction() {
   document.getElementById("demo").innerHTML += "Moused over!<br>";
 }
+    
+function mouseOverEvent() {
+  dataLayer.push({
+  'event': 'mouse_over',
+  'label': 'Try it',
+  'note_one': 'questo è annato'
+  });
+}
 
-function mySecondFunction() {
+function clickAction() {
   document.getElementById("demo").innerHTML += "Clicked!<br>";
+}
+    
+function clickEvent() {
+  dataLayer.push({
+  'event': 'click',
+  'label': 'Try it',
+  'note_two': 'questo pure, de cristo zi'
+  });
 }
 </script>
 
