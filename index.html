@@ -25,16 +25,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <script>
 let x = document.getElementById("myBtn");
-x.addEventListener("mouseover", mouseOverAction);
-x.addEventListener("mouseover", mouseOverEvent);
+x.addEventListener("mouseover", mouseOver);
 x.addEventListener("click", clickAction);
 x.addEventListener("click", clickEvent);
 
-function mouseOverAction() {
+function mouseOver() {
   document.getElementById("demo").innerHTML += "Moused over!<br>";
-}
-    
-function mouseOverEvent() {
   dataLayer.push({
   'event': 'mouse_over',
   'label': 'Try it',
