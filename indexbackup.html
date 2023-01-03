@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-T4XKG3Q');</script>
+<!-- End Google Tag Manager -->
+    
+<title>GTM - Tracking Test</title>
+    
+</head>
+<body>
+
+<h2>JavaScript addEventListener()</h2>
+
+<p>This example uses the addEventListener() method to add many events on the same button.</p>
+
+<button id="myBtn">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+let x = document.getElementById("myBtn");
+x.addEventListener("mouseover", mouseOver);
+x.addEventListener("click", clickAction);
+x.addEventListener("click", clickEvent);
+
+function mouseOver() {
+  document.getElementById("demo").innerHTML += "Moused over!<br>";
+  dataLayer.push({
+  'event': 'mouse_over',
+  'label': 'Try it',
+  'note_one': 'questo è annato'
+  });
+}
+
+function clickAction() {
+  document.getElementById("demo").innerHTML += "Clicked!<br>";
+}
+    
+function clickEvent() {
+  dataLayer.push({
+  'event': 'click',
+  'label': 'Try it',
+  'note_two': 'questo pure, de cristo zi'
+  });
+}
+</script>
+
+</body>
+</html>
