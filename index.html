@@ -25,18 +25,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <script>
 let x = document.getElementById("myBtn");
-x.addEventListener("mouseover", mouseOver);
 x.addEventListener("click", clickAction);
 x.addEventListener("click", clickEvent);
-
-function mouseOver() {
-  document.getElementById("demo").innerHTML += "Moused over!<br>";
-  dataLayer.push({
-  'event': 'mouse_over',
-  'label': 'Try it',
-  'note_one': 'questo è annato'
-  });
-}
 
 function clickAction() {
   document.getElementById("demo").innerHTML += "Clicked!<br>";
