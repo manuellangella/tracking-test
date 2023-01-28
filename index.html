@@ -27,6 +27,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 let x = document.getElementById("myBtn");
 x.addEventListener("click", clickAction);
 x.addEventListener("click", clickEvent);
+x.addEventListener("mouseover", clickMOver);
 
 function clickAction() {
   document.getElementById("demo").innerHTML += "Clicked!<br>";
@@ -36,9 +37,19 @@ function clickEvent() {
   dataLayer.push({
   'event': 'click',
   'label': 'Try it',
+  'note_one': true,
   'note_two': 'questo pure, de cristo zi'
   });
 }
+    
+function clickMOver() {
+  dataLayer.push({
+  'event': 'mouse_over',
+  'label': 'mouseover zi',
+  'note_two': 10
+  });
+}
+
 </script>
 
 </body>
